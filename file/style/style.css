@@ -1,0 +1,41 @@
+.principal h2 {
+    text-align: center;
+}
+
+.principal form {
+    margin-left: 460px;
+    margin-top: 90px;
+}
+
+.botones {
+    margin-top: 570px;
+    margin-left: 520px;
+    padding: 0px;
+    position: absolute;
+}
+
+.video {
+    margin-top: 0px;
+    margin-left: 340px;
+    position: absolute;
+}
+
+.imprimeimg {
+    margin-top: 30px;
+    margin-left: 440px;
+}
+
+.imprimeimg #imagenGuardar {
+    margin-left: 290px;
+    position: absolute;
+    margin-top: -30px;
+}
+
+.video #btnTomar {
+    margin-left: 130px;
+    margin-top: -39px;
+}
+
+.video input {
+    margin-left: 370px;
+}

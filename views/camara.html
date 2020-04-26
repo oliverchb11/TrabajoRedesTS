@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Reconocimiento de imágenes</title>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <link rel="stylesheet" href="cssFiles/camara.css">
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <a href="htmlFiles/index.html" class="nav-link"><input type="button" value="reconocer por imagen" class="btn btn-success nav-item"></a>
+            </ul>
+        </div>
+    </nav>
+    <h1 id="title">Se activara la camara para predecir lo que ve</h1>
+    <div class="container" style="margin-top:20px">
+        <center>
+            <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+        </center>
+        <!--<div id='console'></div>-->
+        <center>
+            <div id="chart_div">
+                <h3>prediciendo...</h3>
+            </div>
+        </center>
+
+        <!-- Add an image that we will use to test-->
+        <!--img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=227 height=227/-->
+        <!-- Load index.js after the content of the page -->
+        <script src="jsFiles/camaraweb.js"></script>
+    </div>
+</body>
+
+
+</html>

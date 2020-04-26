@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="divFileUpload">
+        <input id="file-upload" type="file" accept="image/*" />
+    </div>
+    <div id="imprimeimg">
+    </div>
+
+
+    <script>
+        function readFile(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var filePreview = document.createElement('img');
+                    filePreview.id = 'file-preview';
+                    //e.target.result contents the base64 data from the image uploaded
+                    filePreview.src = e.target.result;
+                    console.log(e.target.result);
+
+                    var previewZone = document.getElementById('imprimeimg');
+                    previewZone.appendChild(filePreview);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        var fileUpload = document.getElementById('file-upload');
+        fileUpload.onchange = function(e) {
+            readFile(e.srcElement);
+        }
+    </script>
+</body>
+
+</html>

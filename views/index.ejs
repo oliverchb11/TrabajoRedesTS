@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="../file/style/style.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Redes Neuronales</title>
+
+</head>
+
+<body>
+
+    <div class="principal">
+        <h2>Bienvenido Suba su imagen</h2>
+        <form>
+            <input name="uploadedfile" type="file" class="btn btn-primary" accept="image/*" id="file-upload" />
+        </form>
+    </div>
+    <h3 id="prueba"></h3>
+    <div class="botones" id="botones">
+        <input type="submit" value="predicion" class="btn btn-primary">
+        <input type=" submit" value="Habilitar camara" class="btn btn-warning" onclick="PrenderCamara()">
+    </div>
+    <div>
+        <section id="imprimeimg" class="imprimeimg">
+            <input type="submit" value="cerrar imagen" id="imagenCerrar" class="btn btn-danger" onclick="CerrarImagen()">
+            <input type="submit" value="guardar imgen" id="imagenGuardar" class="btn btn-success">
+        </section>
+    </div>
+    <div class="video" id="impvideo">
+        <video src="" id="video" autoplay="true"></video>
+        <input type="submit" value="cerrar camara" id="btnCerrar" class="btn btn-danger" onclick="CerrarCamara()">
+        <input type="submit" value="tomar foto" id="btnTomar" class="btn btn-success" onclick="TomarFoto()">
+        <canvas id="canvas"></canvas>
+        <img src=" " id="photo" alt=" ">
+    </div>
+    <!-- <script src="../file/js/camara.js"></script>
+    <script src="../file/js/subirfoto.js"></script>
+    <script src="../file/js/clasificacion.js"></script> -->
+</body>
+
+</html>
